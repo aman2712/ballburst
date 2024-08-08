@@ -1,0 +1,144 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+/* reset default styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* push items to center */
+body{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+    font-family: 'Oxanium', sans-serif;
+}
+
+/* canvas styling */
+canvas{
+    border: 1px solid gold;
+    width: 90%;
+}
+
+/* buttons styling */
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.buttons > button{
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    background-color: rgb(246, 209, 1);
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Oxanium', sans-serif;
+}
+
+.buttons > button:hover{
+    background-color: rgb(217, 184, 0);
+}
+
+/* user experience styling */
+.main-game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-details{
+    margin-left: 2rem;
+}
+
+.game-details > h2{
+    color: #f1f1f1;
+    letter-spacing: 1rem;
+    font-weight: 100;
+}
+
+.game-details > h1{
+    font-size: 7.5rem;
+    color: gold;
+    max-width: 30rem;
+    line-height: 6rem;
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.game-details > p{
+    color: #f1f1f1;
+    font-size: 1.2rem;
+}
+
+.game-responses{
+    width: 25rem;
+    min-height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-responses > p{
+    font-size: 10rem;
+    color: white;
+    animation: animate 0.5s linear forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game-responses > p > span{
+    font-size: 1rem;
+    display: block;
+    margin-top: -2rem;
+}
+
+#start{
+    animation: animate 1s infinite  forwards;
+}
+
+@keyframes animate {
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body{
+        grid-template-columns: 1fr;
+    }
+    .game-details{
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .game-details > h2{
+        font-size: 0.8rem;
+    }
+    .game-details > h1{
+        font-size: 2rem;
+        margin: 0.5rem 0;
+    }
+    .game-responses{
+        width: 100%;
+    }
+}
